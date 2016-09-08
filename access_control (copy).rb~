@@ -1,0 +1,17 @@
+#!/usr/bin/ruby -w
+
+class MyClass
+	attr_reader :protMethod
+	protected :protMethod
+	def protaccess(obj)
+		obj.protMethod
+	end
+		
+end
+
+myc=MyClass.new
+obj=MyClass.new
+myc.protaccess(obj)
+
+
+
